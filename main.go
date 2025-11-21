@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"embed"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -29,6 +30,8 @@ func main() {
 	if err != nil {
 		log.Printf("warning: assuming default configuration. .env unreadable: %v", err)
 	}
+
+	fmt.Println("Test")
 
 	port := os.Getenv("PORT")
 	if port == "" {
